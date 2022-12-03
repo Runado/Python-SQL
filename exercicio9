@@ -1,0 +1,19 @@
+charset utf8
+use fatec
+
+delimiter //
+
+create or replace procedure parimpar(
+    in num double,
+    out msg text
+)
+begin
+    if num mod 2 = 0 then
+        set msg = 'Par';
+    else
+        set msg = 'Impar';
+    end if;
+end//
+
+delimiter ;
+##Faça um programa que leia um número inteiro e mostre uma mensagem indicando se este número é par ou ímpar.
